@@ -27,8 +27,10 @@ Proyek ini merupakan tugas **Asynchronous 4 - Front-End Development Part 2**, ya
 ```
 📦 proyek-crud-auth/
 ├── backend/
-│   ├── config/db.js
-│   ├── middleware/authMiddleware.js
+│   ├── config/
+│   │   └── db.js
+│   ├── middleware/
+│   │   └── authMiddleware.js
 │   ├── models/
 │   │   ├── User.js
 │   │   └── Item.js
@@ -40,7 +42,8 @@ Proyek ini merupakan tugas **Asynchronous 4 - Front-End Development Part 2**, ya
 │
 └── latihan-frontend/
     ├── src/
-    │   ├── api/api.js
+    │   ├── api/
+    │   │   └── api.js
     │   ├── components/
     │   │   ├── Navbar.js
     │   │   ├── PrivateRoute.js
@@ -50,11 +53,14 @@ Proyek ini merupakan tugas **Asynchronous 4 - Front-End Development Part 2**, ya
     │   │   ├── Register.js
     │   │   ├── Dashboard.js
     │   │   └── NotFound.js
-    │   ├── styles/global.css
+    │   ├── styles/
+    │   │   └── global.css
     │   ├── App.js
     │   └── index.js
     ├── package.json
     └── README.md
+├── .gitignore
+└── README.md
 
 ```
 
