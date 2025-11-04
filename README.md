@@ -25,21 +25,36 @@ Proyek ini merupakan tugas **Asynchronous 4 - Front-End Development Part 2**, ya
 ## 📁 **Struktur Project**
 
 ```
-📦 latihan-frontend
-└── src/
-    ├── api/api.js
-    ├── components/
-    │   ├── Navbar.js
-    │   ├── PrivateRoute.js
-    │   └── FormModal.js
-    ├── pages/
-    │   ├── Login.js
-    │   ├── Register.js
-    │   ├── Dashboard.js
-    │   └── NotFound.js
-    ├── styles/global.css
-    ├── App.js
-    └── index.js
+📦 proyek-crud-auth/
+├── backend/
+│   ├── config/db.js
+│   ├── middleware/authMiddleware.js
+│   ├── models/
+│   │   ├── User.js
+│   │   └── Item.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   └── items.js
+│   ├── server.js
+│   └── .env
+│
+└── latihan-frontend/
+    ├── src/
+    │   ├── api/api.js
+    │   ├── components/
+    │   │   ├── Navbar.js
+    │   │   ├── PrivateRoute.js
+    │   │   └── FormModal.js
+    │   ├── pages/
+    │   │   ├── Login.js
+    │   │   ├── Register.js
+    │   │   ├── Dashboard.js
+    │   │   └── NotFound.js
+    │   ├── styles/global.css
+    │   ├── App.js
+    │   └── index.js
+    ├── package.json
+    └── README.md
 ```
 
 ---
