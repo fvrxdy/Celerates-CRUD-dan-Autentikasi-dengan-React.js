@@ -55,6 +55,7 @@ Proyek ini merupakan tugas **Asynchronous 4 - Front-End Development Part 2**, ya
     │   └── index.js
     ├── package.json
     └── README.md
+
 ```
 
 ---
@@ -80,9 +81,9 @@ npm install
 Buat file `.env` di dalam folder `backend/`:
 ```env
 PORT=5000
-DB_NAME=postgres
+DB_NAME=latihan_frontend
 DB_USER=postgres
-DB_PASS=admin
+DB_PASS=123456
 DB_HOST=localhost
 DB_DIALECT=postgres
 JWT_SECRET=supersecretkey123
