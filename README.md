@@ -26,18 +26,6 @@ Proyek ini merupakan tugas **Asynchronous 4 - Front-End Development Part 2**, ya
 
 ```
 📦 latihan-frontend
-├── backend/
-│   ├── config/db.js
-│   ├── middleware/authMiddleware.js
-│   ├── models/
-│   │   ├── User.js
-│   │   └── Item.js
-│   ├── routes/
-│   │   ├── auth.js
-│   │   └── items.js
-│   ├── server.js
-│   └── .env
-│
 └── src/
     ├── api/api.js
     ├── components/
@@ -77,9 +65,9 @@ npm install
 Buat file `.env` di dalam folder `backend/`:
 ```env
 PORT=5000
-DB_NAME=latihan_frontend
+DB_NAME=postgres
 DB_USER=postgres
-DB_PASS=123456
+DB_PASS=admin
 DB_HOST=localhost
 DB_DIALECT=postgres
 JWT_SECRET=supersecretkey123
