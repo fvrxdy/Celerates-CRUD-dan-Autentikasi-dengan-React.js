@@ -1,70 +1,187 @@
-# Getting Started with Create React App
+# 🧠 Front-End CRUD & Authentication with React.js + Express + PostgreSQL
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyek ini merupakan tugas **Asynchronous 4 - Front-End Development Part 2**, yang mengimplementasikan:
+- Autentikasi (Register & Login)
+- CRUD (Create, Read, Update, Delete)
+- Integrasi JWT
+- React Router
+- UI Modern menggunakan React-Bootstrap
+- Database PostgreSQL (diakses via Sequelize ORM)
+- Backend dengan Express.js
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 **Tech Stack**
+| Bagian | Teknologi |
+|--------|------------|
+| Frontend | React.js, React Router DOM, React-Bootstrap, Axios |
+| Backend | Node.js, Express.js, Sequelize ORM |
+| Database | PostgreSQL (diakses melalui DBeaver) |
+| Autentikasi | JWT (JSON Web Token) |
+| Styling | Custom CSS (Glassmorphism UI) |
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📁 **Struktur Project**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+📦 latihan-frontend
+├── backend/
+│   ├── config/db.js
+│   ├── middleware/authMiddleware.js
+│   ├── models/
+│   │   ├── User.js
+│   │   └── Item.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   └── items.js
+│   ├── server.js
+│   └── .env
+│
+└── src/
+    ├── api/api.js
+    ├── components/
+    │   ├── Navbar.js
+    │   ├── PrivateRoute.js
+    │   └── FormModal.js
+    ├── pages/
+    │   ├── Login.js
+    │   ├── Register.js
+    │   ├── Dashboard.js
+    │   └── NotFound.js
+    ├── styles/global.css
+    ├── App.js
+    └── index.js
+```
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚙️ **Langkah Menjalankan Project**
 
-### `npm run build`
+### 🧩 1. Clone Repository
+```bash
+git clone https://github.com/username/latihan-frontend.git
+cd latihan-frontend
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🖥️ 2. Setup Backend (Express + PostgreSQL)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Masuk ke folder backend:
+```bash
+cd backend
+npm install
+```
 
-### `npm run eject`
+Buat file `.env` di dalam folder `backend/`:
+```env
+PORT=5000
+DB_NAME=latihan_frontend
+DB_USER=postgres
+DB_PASS=123456
+DB_HOST=localhost
+DB_DIALECT=postgres
+JWT_SECRET=supersecretkey123
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Jalankan server backend:
+```bash
+npm run dev
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Jika berhasil, muncul:
+```
+✅ PostgreSQL Connected & Synced
+🚀 Server running on http://localhost:5000
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🌐 3. Setup Frontend (React)
+Masuk ke folder utama React:
+```bash
+cd ../
+npm install
+```
 
-## Learn More
+Jalankan React:
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Frontend akan berjalan di:
+```
+http://localhost:3000
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🔐 **Fitur Autentikasi**
+| Fitur | Deskripsi |
+|--------|------------|
+| Register | Pengguna baru dapat mendaftar (data tersimpan di PostgreSQL) |
+| Login | Pengguna login menggunakan email dan password |
+| JWT | Token disimpan di localStorage dan dikirim dalam header Authorization |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🗂️ **Fitur CRUD (Dashboard)**
+| Aksi | Deskripsi |
+|------|------------|
+| Create | Tambah data item melalui modal |
+| Read | Tampilkan seluruh data item milik user login |
+| Update | Edit data item langsung dari dashboard |
+| Delete | Hapus data item langsung dari tabel |
+| Proteksi | Semua aksi CRUD hanya bisa dilakukan user yang login |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧭 **Routing (React Router v6)**
+| Path | Halaman |
+|------|----------|
+| `/login` | Halaman login |
+| `/register` | Halaman register |
+| `/dashboard` | Dashboard (protected route) |
+| `*` | NotFound (404) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🎨 **UI/UX**
+- Desain minimalis & modern (glassmorphism style)
+- Responsif (tampilan menyesuaikan layar)
+- Menggunakan `React-Bootstrap` untuk komponen UI
+- Efek hover & fokus halus untuk pengalaman pengguna yang lebih baik
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🧪 **Kriteria Penilaian (Checklist ✅)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Kriteria | Status | Keterangan |
+|-----------|:------:|------------|
+| Autentikasi Berfungsi | ✅ | User dapat register & login |
+| JWT Terintegrasi | ✅ | Token diverifikasi untuk setiap request |
+| CRUD Berjalan | ✅ | Tambah, edit, hapus, tampil data berhasil |
+| Modal CRUD | ✅ | Semua aksi CRUD dilakukan via modal |
+| React Router | ✅ | Navigasi login → dashboard lancar |
+| UI Rapi | ✅ | Menggunakan React-Bootstrap + desain modern |
+| Kerapian Kode | ✅ | Struktur folder sesuai standar |
+| (Bonus) Validasi Form / Notifikasi | ✅ | Ada alert sukses & gagal |
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🧰 **Sumber Belajar**
+- [React Bootstrap Documentation](https://react-bootstrap.github.io/)
+- [Axios Documentation](https://axios-http.com/)
+- [React Router v6 Docs](https://reactrouter.com/en/main)
+- [JWT.io Introduction](https://jwt.io/introduction)
+- [Sequelize Docs](https://sequelize.org/)
+- [PostgreSQL Docs](https://www.postgresql.org/docs/)
+
+---
+
+## 👨‍💻 **Developer**
+**Nama:** Ferdi Al Majid Firdaus  
+**Kelas:** Front-End Development — Asynchronous 4  
+**Stack:** React.js, Express.js, PostgreSQL  
+**Tanggal:** November 2025  

@@ -1,0 +1,46 @@
+body {
+  background: linear-gradient(135deg, #f8f9fc, #e9effd);
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.card-modern {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-modern:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.btn-modern {
+  background-color: #3b82f6;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-modern:hover {
+  background-color: #2563eb;
+}
+
+.navbar-modern {
+  background: #1f2937 !important;
+}
+
+.table th {
+  background-color: #f1f5f9;
+}
+
+.modal-content {
+  border-radius: 1rem !important;
+}
+
+.form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+}
